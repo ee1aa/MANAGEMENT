@@ -15,9 +15,6 @@
 <body>
   <form action="{{ route('loginPost') }}" method="POST">
     <div class="w-100 vh-100 d-flex" style="align-items:center; justify-content:center;">
-      <div class="logo">
-        <img src="image\atlas-black.png" alt="logo">
-      </div>
       <div class="border vh-50 w-25">
         <div class="w-75 m-auto pt-5">
           <label class="d-block m-0" style="font-size:13px;">メールアドレス</label>
@@ -35,7 +32,7 @@
           <input type="submit" class="btn btn-primary" value="ログイン">
         </div>
         <div class="text-center">
-          <a href="{{ route('registerView') }}">新規登録はこちら</a>
+          <a href="{{ route('registerView') }}">新規登録</a>
         </div>
       </div>
       {{ csrf_field() }}
