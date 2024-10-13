@@ -19,6 +19,19 @@ li {
 .border {
   border: 1px solid #dee2e6 !important;
   border-radius: 10px;
+  background-color: #fff;
+}
+
+.logo {
+  margin-bottom: 80px;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.text-center {
+  margin-bottom: 16px;
 }
 
 /* サイドバー */
