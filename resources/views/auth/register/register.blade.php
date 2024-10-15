@@ -22,6 +22,15 @@
             <div class="w-25 vh-75 border p-3">
                 <div class="register_form">
                     <div class="d-flex mt-3" style="justify-content:space-between">
+                        @if ($errors->any())
+                        <div class="register_error">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li class="error-massage">{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
                         <div class="" style="width:140px">
                             <label class="d-block m-0" style="font-size:13px">姓</label>
                             <div class="border-bottom border-primary" style="width:140px;">
