@@ -69,7 +69,7 @@ class User extends Authenticatable
     public function subjects(){
         return $this->belongsToMany(
             Subjects::class,           // 関連するモデルのクラス名
-            'subject_user',        // 中間テーブルの名前（省略可能）
+            'subject_users',        // 中間テーブルの名前（省略可能）
             'user_id',            // 中間テーブルにおける呼び出し元モデルの外部キー名（省略可能）
             'subject_id',             // 中間テーブルにおける関連モデルの外部キー名（省略可能）
         );// リレーションの定義
