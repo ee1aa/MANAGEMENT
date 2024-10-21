@@ -59,6 +59,20 @@ class RegisterController extends Controller
 
     public function registerPost(Request $request)
     {
+        $request->validate([
+        'over_name' => 'required|string|max:10',
+        'under_name' => 'required|string|max:10',
+        'over_name_kana' => 'required|string|max:30|regex:/^[ァ-ヶー]+$/u',
+        'under_name_kana' => 'required|string|max:30|regex:/^[ァ-ヶー]+$/u',
+        'mail_address' => 'required|email|unique:users,mail_address|max:100',
+        'sex' => 'required|in:1,2,3',
+        'old_year' => 'required|numeric',
+        'old_month' => 'required|numeric',
+        'old_day' => 'required|date_format:Y-m-d|after_or_equal:2000-01-01|before_or_equal:today',
+        'role' => 'required|in:1,2,3,4',
+        'password' => 'required|string|min:8|max:30|confirmed',
+        ]);
+
         DB::beginTransaction();
         try{
             $old_year = $request->old_year;
