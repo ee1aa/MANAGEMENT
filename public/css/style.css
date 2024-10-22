@@ -34,6 +34,12 @@ li {
   margin-bottom: 16px;
 }
 
+.invalid-feedback {
+  margin-top: 5px;
+  color: #c44144;
+  font-weight: bold;
+}
+
 /* サイドバー */
 .sidebar {
   width: 150px;
