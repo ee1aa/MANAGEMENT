@@ -68,7 +68,7 @@ class RegisterController extends Controller
         'sex' => 'required|in:1,2,3',
         'old_year' => 'required|numeric',
         'old_month' => 'required|numeric',
-        'old_day' => 'required|date_format:Y-m-d|after_or_equal:2000-01-01|before_or_equal:today',
+        'old_day' => 'required|date|after_or_equal:2000-01-01|before_or_equal:today',
         'role' => 'required|in:1,2,3,4',
         'password' => 'required|string|min:8|max:30|confirmed',
         ]);
